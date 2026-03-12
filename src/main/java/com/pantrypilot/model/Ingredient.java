@@ -1,13 +1,16 @@
 package main.java.com.pantrypilot.model;
 
 public class Ingredient {
-    private String id;
+    private final String id;
     private String name;
     private int quantity;
     private Unit unit;
 
     // Constructor
     public Ingredient(String id, String name, int quantity, Unit unit){
+        if (quantity < 0){
+            throw new IllegalArgumentException("Quantity can't be negative")
+        }
         this.id = id;
         this.name = name;
         this.quantity = quantity;
@@ -29,5 +32,18 @@ public class Ingredient {
 
     public Unit getUnit(){
         return this.unit;
+    }
+
+    // Setters
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setQuantity(int quantity){
+        this.quantity = quantity;
+    }
+
+    public void setUnit(Unit unit){
+        this.unit = unit;
     }
 }
