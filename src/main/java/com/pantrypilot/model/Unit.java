@@ -9,5 +9,8 @@ public enum Unit {
     MILLILITRE,
     LITRE,
     TSP,
-    TBSP
+    TBSP,
+
+    // Misc
+    COUNT
 }
