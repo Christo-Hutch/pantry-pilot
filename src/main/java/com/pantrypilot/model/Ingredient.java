@@ -9,7 +9,7 @@ public class Ingredient {
     // Constructor
     public Ingredient(String id, String name, int quantity, Unit unit){
         if (quantity < 0){
-            throw new IllegalArgumentException("Quantity can't be negative")
+            throw new IllegalArgumentException("Quantity can't be negative");
         }
         this.id = id;
         this.name = name;
