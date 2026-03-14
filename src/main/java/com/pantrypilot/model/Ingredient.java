@@ -46,4 +46,9 @@ public class Ingredient {
     public void setUnit(Unit unit){
         this.unit = unit;
     }
+
+    // Add to ingredient quantity
+    public void addToQuantity(int quantity){
+        this.quantity += quantity;
+    }
 }
